@@ -1,0 +1,17 @@
+
+
+CREATE DATABASE IF NOT EXISTS libros;
+
+USE libros;
+
+CREATE TABLE IF NOT EXISTS informacion (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255),
+    descripcion VARCHAR(255),
+    imagen VARCHAR(255)
+);
+INSERT INTO informacion (titulo, descripcion, imagen) 
+VALUES ('El color perdido del bosque', 'Sammie has been diagnosed with Niemann-Pick Type C, a long and complicated word that means Sammie will slowly lose her memories.', 'https://i.pinimg.com/originals/ab/7a/1d/ab7a1d8d8ac9e4bcf501689ad50dda9d.jpg'),
+('El color perdido del bosque', 'Sammie has been diagnosed with Niemann-Pick Type C, a long and complicated word that means Sammie will slowly lose her memories.', 'https://i.pinimg.com/originals/ab/7a/1d/ab7a1d8d8ac9e4bcf501689ad50dda9d.jpg'),
+('El color perdido del bosque', 'Sammie has been diagnosed with Niemann-Pick Type C, a long and complicated word that means Sammie will slowly lose her memories.', 'https://i.pinimg.com/originals/ab/7a/1d/ab7a1d8d8ac9e4bcf501689ad50dda9d.jpg'),
+('El color perdido del bosque', 'Sammie has been diagnosed with Niemann-Pick Type C, a long and complicated word that means Sammie will slowly lose her memories.', 'https://i.pinimg.com/originals/ab/7a/1d/ab7a1d8d8ac9e4bcf501689ad50dda9d.jpg');

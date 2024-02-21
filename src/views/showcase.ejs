@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('partials/header')%>
+    <section id="principal">
+        <div id="todos_libros">
+            <% for(let i=0;i<libros.length;i++){%>
+                <form class="libro_unidad" method="POST">
+                    <div class="titulo_div">
+                        <h1><%=libros[i].titulo%></h1>
+                    </div>
+                    <a href="/info" type="submit" name="id" value="<%=libros[i].id%>"><img src="<%=libros[i].imagen%>"  class="imagen_libro"></a>
+                    <p><%=libros[i].descripcion%></p>
+                    <div class="valoraciones">
+                        <p>0<%=libros[i].reviews%> reviews</p>
+                        <p>0<%=libros[i].valoracion%>/5</p>
+                    </div>
+                    <div class="botones">
+                        <button class="info" name="info" value="<%=libros[i].id%>" type="submit">Información</button>
+                        <button class="eliminar" name="eliminar" value="<%=libros[i].id%>" type="submit">Borrar</button>
+                    </div>
+                   
+                </form>
+            <%}%>
+        </div>
+    </section>
+</body>
+</html>
